@@ -1,10 +1,10 @@
 # AI Agent (LLM + Tools + RAG)
 
 ## 📝 Overview
-Продвинутый AI-агент, который использует LLM для принятия решений, имеет доступ к внешним инструментам (поиск по GitHub) и использует RAG для работы с базой знаний.
+An advanced AI agent that uses LLM for decision making, has access to external tools (search GitHub), and uses RAG for knowledge base management.
 
 ## 🏗 Architecture
-Агент реализован как циклическая система (ReAct или Graph-based), где LLM выбирает действие на основе контекста и доступных инструментов.
+The agent is implemented as a cyclic system (ReAct or Graph-based), where the LLM selects an action based on the context and available tools.
 
 ```mermaid
 graph TD
@@ -27,25 +27,25 @@ graph TD
 - **Infrastructure:** Python
 
 ## 🧩 Component Breakdown
-1. **Brain (LLM):** Логическое ядро, планирующее шаги.
-2. **Knowledge Base (RAG):** Векторное хранилище с индексированными данными (например, GitHub issues).
-3. **Toolbelt:** Набор функций-инструментов, которые агент может вызывать.
-4. **State Manager:** Управление состоянием диалога и историей действий (LangGraph State).
+1. **Brain (LLM):** A logical core that plans steps.
+2. **Knowledge Base (RAG):** A vector store with indexed data (e.g., GitHub issues).
+3. **Toolbelt:** A set of tool functions that the agent can call.
+4. **State Manager:** Manages the dialog state and action history (LangGraph State).
 
 ## 🔄 Data Flow
-1. Пользователь задает сложный вопрос.
-2. Агент анализирует запрос и решает, какую информацию нужно найти.
-3. Агент вызывает Retriever Tool для поиска по локальной базе знаний.
-4. Если нужно, агент вызывает GitHub API для получения актуальных данных.
-5. Агент синтезирует финальный ответ.
+1. The user asks a complex question.
+2. The agent analyzes the query and decides what information to retrieve.
+3. The agent calls the Retriever Tool to search the local knowledge base.
+4. If necessary, the agent calls the GitHub API to retrieve up-to-date data.
+5. The agent synthesizes the final response.
 
 ## 🎓 Learning Objectives (Skills)
-- Проектирование архитектуры агентов (Phase 6)
-- Реализация RAG пайплайнов (Phase 5)
-- Использование LangGraph для управления логикой (Phase 6)
-- Работа с векторными БД (Phase 5).
+- Designing Agent Architecture (Phase 6)
+- Implementing RAG Pipelines (Phase 5)
+- Using LangGraph to Manage Logic (Phase 6)
+- Working with Vector Databases (Phase 5).
 
 ## 🚀 Future Improvements
-- Добавление памяти (Long-term memory).
-- Автономное выполнение задач (Multi-step reasoning).
-- Групповая работа нескольких агентов (Multi-agent systems).
+- Memory addition (Long-term memory).
+- Autonomous task execution (Multi-step reasoning).
+- Group operation of multiple agents (Multi-agent systems).
