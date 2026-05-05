@@ -8,16 +8,16 @@ The agent is implemented as a cyclic system (ReAct or Graph-based), where the LL
 
 ```mermaid
 graph TD
-    User[Пользователь] --> Agent[AI Agent - LangGraph]
+    User[User] --> Agent[AI Agent - LangGraph]
     Agent --> LLM[LLM Brain]
-    LLM --> Decision{Выбор действия}
+    LLM --> Decision{Сhoice of action}
     Decision --> Tool1[Retriever Tool - RAG]
     Decision --> Tool2[GitHub Tool]
     Decision --> Tool3[Note Tool]
     Tool1 --> Agent
     Tool2 --> Agent
     Tool3 --> Agent
-    Agent --> Response[Ответ пользователю]
+    Agent --> Response[Reply to user]
 ```
 
 ## 🛠 Technology Stack
